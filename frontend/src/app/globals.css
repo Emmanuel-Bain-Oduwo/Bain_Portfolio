@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #F8FAF9;
+    --card: #FFFFFF;
+    --border: #E2E8E4;
+    --text: #0D1A12;
+    --text-muted: #5A6B62;
+    --accent-green: #00CC6A;
+    --accent-blue: #0055DD;
+  }
+
+  .dark {
+    --bg: #0A0F0D;
+    --card: #111A14;
+    --border: #1E2E22;
+    --text: #F0F0F0;
+    --text-muted: #6B7B72;
+    --accent-green: #00FF87;
+    --accent-blue: #0066FF;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: rgba(0, 255, 135, 0.2);
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-green);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-heading font-semibold tracking-tight;
+    color: var(--text);
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-widest mb-4 inline-block;
+    color: var(--accent-green);
+  }
+
+  .card-base {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    @apply rounded-xl transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card-base hover:border-opacity-60;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-150 focus-visible:outline-none;
+    background-color: var(--accent-green);
+    color: #0A0F0D;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-150 focus-visible:outline-none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+  }
+
+  .tag-mono {
+    @apply font-mono text-xs px-2 py-0.5 rounded;
+    background-color: var(--border);
+    color: var(--text-muted);
+  }
+
+  .accent-dot {
+    @apply w-1.5 h-1.5 rounded-full inline-block;
+    background-color: var(--accent-green);
+  }
+
+  .divider {
+    @apply w-full;
+    border-top: 1px solid var(--border);
+  }
+
+  .text-accent {
+    color: var(--accent-green);
+  }
+
+  .text-accent-blue {
+    color: var(--accent-blue);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .border-color {
+    border-color: var(--border);
+  }
+
+  .bg-card {
+    background-color: var(--card);
+  }
+
+  .bg-main {
+    background-color: var(--bg);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-mono-custom {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ECG animation */
+.ecg-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: ecgDraw 4s linear infinite;
+}
+
+@keyframes ecgDraw {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
