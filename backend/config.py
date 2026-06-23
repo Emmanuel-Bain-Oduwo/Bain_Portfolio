@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
 
-    contact_email: str = "admin@kemirix.com"
-    from_email: str = "admin@kemirix.com"
+    contact_email: str = "emmanuelbain@kemirix.com"
+    from_email: str = "emmanuelbain@kemirix.com"
     from_name: str = "Emmanuel Bain Oduwo Portfolio"
 
     frontend_url: str = "https://www.bain.me"

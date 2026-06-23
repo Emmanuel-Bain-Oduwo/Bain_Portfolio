@@ -1160,10 +1160,10 @@ function OpenToSection() {
                 <Mail size={15} /> Get in Touch
               </a>
               <a
-                href="mailto:admin@kemirix.com"
+                href="mailto:emmanuelbain@kemirix.com"
                 className="btn-secondary"
               >
-                admin@kemirix.com <ArrowRight size={14} />
+                emmanuelbain@kemirix.com <ArrowRight size={14} />
               </a>
             </div>
           </div>
@@ -1243,11 +1243,11 @@ function ContactSection() {
               <div>
                 <p className="font-mono text-xs uppercase tracking-widest text-muted mb-3">Email</p>
                 <a
-                  href="mailto:admin@kemirix.com"
+                  href="mailto:emmanuelbain@kemirix.com"
                   className="flex items-center gap-2 text-sm hover:text-accent transition-colors"
                 >
                   <Mail size={14} className="text-accent" />
-                  admin@kemirix.com
+                  emmanuelbain@kemirix.com
                 </a>
               </div>
               <div>
@@ -1381,10 +1381,10 @@ function ContactSection() {
                     <X size={14} />
                     Something went wrong. Please email me at{' '}
                     <a
-                      href="mailto:admin@kemirix.com"
+                      href="mailto:emmanuelbain@kemirix.com"
                       className="underline hover:opacity-80"
                     >
-                      admin@kemirix.com
+                      emmanuelbain@kemirix.com
                     </a>
                   </p>
                 )}

@@ -112,7 +112,7 @@ def _build_autoreply_html(name: str, subject: str) -> str:
             </p>
             <p style="margin:0 0 32px;color:#6B7B72;font-size:14px;line-height:1.7;">
               If your message is urgent, you can reach me directly at
-              <a href="mailto:admin@kemirix.com" style="color:#00FF87;text-decoration:none;">admin@kemirix.com</a>.
+              <a href="mailto:emmanuelbain@kemirix.com" style="color:#00FF87;text-decoration:none;">emmanuelbain@kemirix.com</a>.
             </p>
 
             <div style="border-top:1px solid #1E2E22;padding-top:28px;">

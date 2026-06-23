@@ -14,7 +14,7 @@ bain_portfolio/
 └── backend/     FastAPI — handles the contact form and email delivery
 ```
 
-The frontend lives on **Vercel**. The backend lives on **Railway**. They talk to each other — when someone fills out the contact form on the site, the message gets stored in PostgreSQL and delivered to my inbox at `admin@kemirix.com`.
+The frontend lives on **Vercel**. The backend lives on **Railway**. They talk to each other — when someone fills out the contact form on the site, the message gets stored in PostgreSQL and delivered to my inbox at `emmanuelbain@kemirix.com`.
 
 ---
 
@@ -80,9 +80,9 @@ Opens at `http://localhost:8000`. Interactive API docs are at `/docs`.
 | `DATABASE_URL` | Auto-injected by Railway |
 | `SMTP_HOST` | `smtp.gmail.com` |
 | `SMTP_PORT` | `587` |
-| `SMTP_USER` | `admin@kemirix.com` |
+| `SMTP_USER` | `emmanuelbain@kemirix.com` |
 | `SMTP_PASSWORD` | Your Google App Password (see note below) |
-| `CONTACT_EMAIL` | `admin@kemirix.com` |
+| `CONTACT_EMAIL` | `emmanuelbain@kemirix.com` |
 | `FRONTEND_URL` | `https://www.bain.me` |
 
 > **Google App Password** — Go to your Google Account → Security → 2-Step Verification → App Passwords. Generate one for "Mail" and use it as `SMTP_PASSWORD`. This is needed because Google Workspace blocks regular password login for SMTP.
@@ -94,7 +94,7 @@ Opens at `http://localhost:8000`. Interactive API docs are at `/docs`.
 Someone fills out the form on the site → frontend POSTs to the Railway backend → backend:
 
 1. Saves the message to PostgreSQL
-2. Sends a notification email to `admin@kemirix.com` with all the details and a one-click reply button
+2. Sends a notification email to `emmanuelbain@kemirix.com` with all the details and a one-click reply button
 3. Sends a professional auto-reply to the person who wrote in
 
 Both emails are HTML and match the site's visual style.
