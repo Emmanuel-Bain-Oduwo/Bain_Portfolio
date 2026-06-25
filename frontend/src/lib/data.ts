@@ -95,7 +95,7 @@ export const PROJECTS = [
     status: 'Published',
     statusColor: 'green' as const,
     featured: false,
-    link: null,
+    link: 'https://huggingface.co/datasets/Oduwo/drug_label_approved_openfda',
     github: null,
   },
   {

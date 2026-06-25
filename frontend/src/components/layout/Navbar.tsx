@@ -96,6 +96,14 @@ export default function Navbar() {
             className="md:hidden fixed inset-0 z-40"
             style={{ background: 'rgba(8,13,10,0.97)', backdropFilter: 'blur(12px)' }}
           >
+            {/* Close button */}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="absolute top-5 right-5 p-2 rounded-lg text-white hover:text-accent transition-colors"
+              aria-label="Close menu"
+            >
+              <X size={28} />
+            </button>
             <div className="flex flex-col items-center justify-center h-full gap-6 px-8">
               {NAV_LINKS.map((link, i) => (
                 <motion.a
