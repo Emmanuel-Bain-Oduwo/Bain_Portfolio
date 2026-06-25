@@ -17,7 +17,7 @@ export const PROJECTS = [
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: true,
-    link: null,
+    link: 'https://drug.kemirix.com',
     github: null,
   },
   {
@@ -38,7 +38,7 @@ export const PROJECTS = [
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: true,
-    link: null,
+    link: 'https://drug.kemirix.com',
     github: null,
   },
   {
@@ -77,7 +77,7 @@ export const PROJECTS = [
     status: 'Published',
     statusColor: 'green' as const,
     featured: true,
-    link: 'https://huggingface.co/datasets/PLACEHOLDER',
+    link: 'https://www.kaggle.com/datasets/bainnn/african-pharmacovigilance-adverse-drug-reactions',
     github: null,
   },
   {
@@ -95,7 +95,24 @@ export const PROJECTS = [
     status: 'Published',
     statusColor: 'green' as const,
     featured: false,
-    link: 'https://huggingface.co/datasets/PLACEHOLDER',
+    link: null,
+    github: null,
+  },
+  {
+    id: 'diabetes-model',
+    title: 'Diabetes Risk Assessment Model',
+    category: 'Clinical ML Model',
+    problem:
+      'Early identification of diabetes risk requires accessible, data-driven tools that clinicians and researchers can use without complex infrastructure.',
+    solution:
+      'Machine learning model for diabetes risk assessment trained on clinical data, published on Kaggle for open access by researchers and healthcare AI teams.',
+    impact:
+      'Publicly available clinical ML model supporting diabetes risk research and healthcare AI education.',
+    technologies: ['Python', 'Scikit-Learn', 'Pandas', 'Machine Learning', 'Kaggle'],
+    status: 'Published',
+    statusColor: 'green' as const,
+    featured: true,
+    link: 'https://www.kaggle.com/models/bainnn/diabetes-risk-assessment-model',
     github: null,
   },
   {
@@ -113,7 +130,7 @@ export const PROJECTS = [
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: false,
-    link: null,
+    link: 'https://kemimed.kemirix.com',
     github: null,
   },
   {
@@ -131,7 +148,7 @@ export const PROJECTS = [
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: false,
-    link: null,
+    link: 'https://www.lysi.com',
     github: null,
   },
 ]

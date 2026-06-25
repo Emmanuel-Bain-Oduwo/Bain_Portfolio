@@ -41,8 +41,8 @@
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: 18px;
+    line-height: 1.8;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
@@ -75,20 +75,14 @@
     @apply py-10 lg:py-16;
   }
 
-  /* Section label */
-  .label {
-    @apply font-mono text-xs uppercase tracking-widest mb-3 inline-block;
-    color: var(--accent-green);
-  }
-
   /* Headings */
   .h2 {
-    @apply text-3xl sm:text-4xl font-heading font-semibold tracking-tight mb-3;
+    @apply text-4xl sm:text-5xl font-heading font-semibold tracking-tight mb-3;
     color: var(--text);
   }
 
   .h3 {
-    @apply text-xl sm:text-2xl font-heading font-semibold tracking-tight;
+    @apply text-2xl sm:text-3xl font-heading font-semibold tracking-tight;
     color: var(--text);
   }
 
@@ -105,7 +99,7 @@
 
   /* Buttons */
   .btn {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-150;
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-base transition-all duration-150;
     font-family: 'Space Grotesk', sans-serif;
   }
 
@@ -128,10 +122,15 @@
 
   /* Tag */
   .tag {
-    @apply font-mono text-xs px-2.5 py-1 rounded-lg;
+    @apply font-mono text-sm px-3 py-1 rounded-lg;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border);
     color: var(--text-muted);
+  }
+
+  .label {
+    @apply font-mono text-sm uppercase tracking-widest mb-3 inline-block;
+    color: var(--accent-green);
   }
 
   /* Accent text */

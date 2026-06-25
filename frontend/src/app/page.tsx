@@ -234,7 +234,7 @@ function Hero() {
                   src="/emmanuel-portrait.jpg"
                   alt="Emmanuel Bain Oduwo"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top" quality={95}
                   priority
                 />
                 {/* Name overlay at bottom */}
@@ -244,7 +244,7 @@ function Hero() {
                 >
                   <p className="font-heading font-semibold text-lg text-white">Emmanuel Bain Oduwo</p>
                   <p className="font-mono text-xs" style={{ color: 'var(--accent-green)' }}>
-                    Parul University · GPA 7.75
+                    Parul University · GPA 7.86
                   </p>
                 </div>
               </div>
@@ -357,7 +357,7 @@ function About() {
                 <Calendar size={14} className="accent flex-shrink-0" /> Graduating June 2028
               </span>
               <span className="flex items-center gap-2">
-                <GraduationCap size={14} className="accent flex-shrink-0" /> GPA: 7.75
+                <GraduationCap size={14} className="accent flex-shrink-0" /> GPA: 7.86
               </span>
             </div>
           </Up>
@@ -445,8 +445,8 @@ function ProjectCard({ p }: { p: typeof PROJECTS[0] }) {
         <Badge status={p.status} color={p.statusColor === 'green' ? 'green' : 'blue'} />
       </div>
       <div className="space-y-3 mb-5 flex-1">
-        <p className="text-sm muted leading-relaxed"><span className="font-mono text-xs uppercase tracking-wider" style={{ color: 'var(--accent-green)' }}>Problem · </span>{p.problem}</p>
-        <p className="text-sm muted leading-relaxed"><span className="font-mono text-xs uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Solution · </span>{p.solution}</p>
+        <p className="text-base muted leading-relaxed"><span className="font-mono text-xs uppercase tracking-wider" style={{ color: 'var(--accent-green)' }}>Problem · </span>{p.problem}</p>
+        <p className="text-base muted leading-relaxed"><span className="font-mono text-xs uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Solution · </span>{p.solution}</p>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--text)' }}>{p.impact}</p>
       </div>
       <div className="flex flex-wrap gap-1.5 mb-4">
@@ -635,7 +635,7 @@ function TeachingEducation() {
                   <div>
                     <h3 className="font-heading font-semibold text-base">Bachelor of Pharmacy</h3>
                     <p className="text-sm font-medium accent mt-0.5">Parul University, India</p>
-                    <p className="font-mono text-xs muted mt-1">Aug 2024 – June 2028 · GPA: 7.75</p>
+                    <p className="font-mono text-xs muted mt-1">Aug 2024 – June 2028 · GPA: 7.86</p>
                   </div>
                 </div>
                 <p className="font-mono text-xs uppercase tracking-wider muted mb-3">Coursework</p>
