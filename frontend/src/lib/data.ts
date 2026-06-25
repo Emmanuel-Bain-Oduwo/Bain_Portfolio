@@ -13,6 +13,7 @@ export const PROJECTS = [
       'Python', 'FastAPI', 'LangGraph', 'LangChain',
       'PostgreSQL', 'Redis', 'Vertex AI', 'Google Cloud',
     ],
+    evidence: 'Clinical AI architecture in active development at Kemirix Health Technologies',
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: true,
@@ -33,6 +34,7 @@ export const PROJECTS = [
       'Python', 'LangChain', 'LangGraph', 'RAG',
       'Docker', 'FastAPI',
     ],
+    evidence: 'RAG-powered clinical AI assistant in active development',
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: true,
@@ -53,6 +55,7 @@ export const PROJECTS = [
       'PyTorch', 'PyTorch/XLA', 'JAX', 'XPK',
       'PEFT', 'LoRA', 'FSDPv2', 'SPMD', 'Google Cloud TPU',
     ],
+    evidence: 'Active infrastructure — running on Google Cloud TPU v5e',
     status: 'Active',
     statusColor: 'green' as const,
     featured: true,
@@ -70,6 +73,7 @@ export const PROJECTS = [
     impact:
       'Published dataset supporting pharmacovigilance research and healthcare AI development for underrepresented African patient populations.',
     technologies: ['Python', 'Pandas', 'Data Curation', 'MedDRA', 'ICH E2B'],
+    evidence: 'Published on Hugging Face — open pharmacovigilance dataset',
     status: 'Published',
     statusColor: 'green' as const,
     featured: true,
@@ -87,6 +91,7 @@ export const PROJECTS = [
     impact:
       'Provides a structured foundation for drug-drug interaction AI systems and medication safety research.',
     technologies: ['Python', 'PostgreSQL', 'Data Engineering', 'Clinical Pharmacology'],
+    evidence: 'Published on Hugging Face — structured DDI intelligence dataset',
     status: 'Published',
     statusColor: 'green' as const,
     featured: false,
@@ -104,6 +109,7 @@ export const PROJECTS = [
     impact:
       'Deployed to support science and healthcare education for students across multiple learning contexts.',
     technologies: ['Next.js', 'FastAPI', 'Python', 'PostgreSQL', 'AI/ML'],
+    evidence: 'AI-powered learning platform in active development',
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: false,
@@ -121,6 +127,7 @@ export const PROJECTS = [
     impact:
       'Serving educational institutions with integrated school management and AI-powered learning tools.',
     technologies: ['Next.js', 'FastAPI', 'PostgreSQL', 'Python', 'AI/ML'],
+    evidence: 'Integrated school management and AI learning platform in active development',
     status: 'In Development',
     statusColor: 'blue' as const,
     featured: false,

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {
   ArrowRight, ExternalLink, Mail, MapPin, Calendar,
@@ -326,7 +326,7 @@ function WhatImBuilding() {
         <SectionHeader
           label="Focus Areas"
           title="What I'm Building"
-          description="Every project targets a real clinical or educational problem at the intersection of healthcare and artificial intelligence."
+          description="Every project targets a real clinical or educational problem. One goal threads through all of it: helping healthcare professionals make safer, more informed decisions."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {FOCUS_AREAS.map((area, i) => (
@@ -349,6 +349,34 @@ function WhatImBuilding() {
         </div>
       </div>
     </section>
+  )
+}
+
+// ─── Mission Pull-Quote ───────────────────────────────────────────────────────
+
+function MissionPullQuote() {
+  return (
+    <div className="container-main py-0 pb-4">
+      <FadeUp>
+        <div
+          className="rounded-2xl px-8 py-7 max-w-3xl"
+          style={{ background: 'rgba(0,255,135,0.04)', border: '1px solid rgba(0,255,135,0.12)' }}
+        >
+          <p
+            className="text-base sm:text-lg font-heading leading-relaxed"
+            style={{ color: 'var(--text)' }}
+          >
+            "Every system I build is designed to help healthcare professionals
+            make{' '}
+            <span style={{ color: 'var(--accent-green)' }}>safer, more informed decisions</span>
+            {' '}— before patient harm occurs."
+          </p>
+          <p className="mt-3 font-mono text-xs text-muted">
+            — Emmanuel Bain Oduwo, B.Pharm · AI Engineer · Co-Founder, Kemirix
+          </p>
+        </div>
+      </FadeUp>
+    </div>
   )
 }
 
@@ -510,19 +538,31 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
       </div>
 
       <div className="space-y-4 mb-6 flex-1">
+        {/* Impact leads — the outcome is the point */}
+        <div>
+          <p className="font-mono text-xs uppercase tracking-widest text-muted mb-1.5">Impact</p>
+          <p className="text-sm leading-relaxed font-medium" style={{ color: 'var(--text)' }}>
+            {project.impact}
+          </p>
+        </div>
+
+        {/* Evidence — proof it exists */}
+        {project.evidence && (
+          <div
+            className="flex items-start gap-2 rounded-lg px-3 py-2.5"
+            style={{ background: 'rgba(0,255,135,0.06)', border: '1px solid rgba(0,255,135,0.15)' }}
+          >
+            <CheckCircle size={13} className="flex-shrink-0 mt-0.5" style={{ color: 'var(--accent-green)' }} />
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--accent-green)' }}>
+              {project.evidence}
+            </p>
+          </div>
+        )}
+
+        {/* Problem context */}
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-muted mb-1.5">Problem</p>
           <p className="text-sm leading-relaxed text-muted">{project.problem}</p>
-        </div>
-        <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-muted mb-1.5">Solution</p>
-          <p className="text-sm leading-relaxed text-muted">{project.solution}</p>
-        </div>
-        <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-muted mb-1.5">Impact</p>
-          <p className="text-sm leading-relaxed" style={{ color: 'var(--text)' }}>
-            {project.impact}
-          </p>
         </div>
       </div>
 
@@ -1040,23 +1080,40 @@ function SkillsSection() {
   return (
     <section id="skills" className="section-padding" aria-label="Skills">
       <div className="container-main">
-        <SectionHeader
-          label="Skills"
-          title="Technical & Clinical Skills"
-          description="Bridging pharmaceutical science with modern AI engineering, MLOps, and clinical informatics."
-        />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <FadeUp className="mb-8">
+          <span className="section-label">Skills</span>
+          <h2 className="text-2xl font-heading font-semibold tracking-tight">Skills</h2>
+          <p className="mt-2 text-muted text-sm max-w-xl leading-relaxed">
+            Where pharmacy science and AI engineering overlap.
+          </p>
+        </FadeUp>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {Object.entries(SKILLS).map(([category, skills], i) => (
-            <FadeUp key={category} delay={i * 0.06}>
-              <div className="card-base p-5 h-full">
+            <FadeUp key={category} delay={i * 0.05}>
+              <div
+                className="p-4 rounded-xl h-full"
+                style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
+              >
                 <h3
-                  className="font-heading font-semibold text-sm mb-4"
-                  style={{ color: 'var(--accent-blue)' }}
+                  className="font-mono text-xs uppercase tracking-widest mb-3"
+                  style={{ color: 'var(--text-muted)' }}
                 >
                   {category}
                 </h3>
-                <div className="flex flex-wrap gap-1.5">
-                  {skills.map((skill) => <TechTag key={skill} tech={skill} />)}
+                <div className="flex flex-wrap gap-1">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="font-mono text-xs px-2 py-0.5 rounded"
+                      style={{
+                        background: 'var(--bg)',
+                        color: 'var(--text-muted)',
+                        border: '1px solid var(--border)',
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             </FadeUp>
@@ -1241,25 +1298,68 @@ function ContactSection() {
           <FadeUp className="lg:col-span-2">
             <div className="space-y-6">
               <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-muted mb-3">Email</p>
-                <a
-                  href="mailto:emmanuelbain@kemirix.com"
-                  className="flex items-center gap-2 text-sm hover:text-accent transition-colors"
-                >
-                  <Mail size={14} className="text-accent" />
-                  emmanuelbain@kemirix.com
-                </a>
-              </div>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-muted mb-3">Location</p>
-                <p className="flex items-center gap-2 text-sm text-muted">
-                  <MapPin size={14} className="text-accent flex-shrink-0" />
-                  Parul University, India
-                </p>
-              </div>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-muted mb-3">Response Time</p>
-                <p className="text-sm text-muted">Usually within 48 hours</p>
+                <p className="font-mono text-xs uppercase tracking-widest text-muted mb-4">3 ways to reach me</p>
+
+                {/* 1 — Email */}
+                <div className="space-y-3">
+                  <div className="card-base p-4 flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ background: 'rgba(0,255,135,0.1)', color: 'var(--accent-green)' }}
+                    >
+                      <Mail size={15} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-mono text-muted mb-0.5">Email directly</p>
+                      <a
+                        href="mailto:emmanuelbain@kemirix.com"
+                        className="text-sm font-medium hover:text-accent transition-colors"
+                        style={{ color: 'var(--text)' }}
+                      >
+                        emmanuelbain@kemirix.com
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* 2 — Form */}
+                  <div className="card-base p-4 flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ background: 'rgba(0,102,255,0.1)', color: 'var(--accent-blue)' }}
+                    >
+                      <Send size={15} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-mono text-muted mb-0.5">Fill the form</p>
+                      <p className="text-sm" style={{ color: 'var(--text)' }}>
+                        Use the contact form →
+                      </p>
+                      <p className="text-xs text-muted mt-0.5">Reply within 48 hours</p>
+                    </div>
+                  </div>
+
+                  {/* 3 — Social DM */}
+                  <div className="card-base p-4 flex items-start gap-3">
+                    <div
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ background: 'rgba(10,102,194,0.12)', color: '#0A66C2' }}
+                    >
+                      <PlatformSvg name="linkedin" color="#0A66C2" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-mono text-muted mb-0.5">DM on LinkedIn</p>
+                      <a
+                        href="https://linkedin.com/in/PLACEHOLDER"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium hover:text-accent transition-colors inline-flex items-center gap-1"
+                        style={{ color: 'var(--text)' }}
+                      >
+                        linkedin.com/in/emmanuel <ExternalLink size={11} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="divider" />
@@ -1280,6 +1380,11 @@ function ContactSection() {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="flex items-center gap-2 text-xs text-muted">
+                <MapPin size={12} className="flex-shrink-0 text-accent" />
+                Parul University, India
               </div>
             </div>
           </FadeUp>
@@ -1426,8 +1531,8 @@ function Footer() {
             <span className="font-heading font-semibold text-accent text-base">EBO</span>
             <span className="text-xs font-mono">Emmanuel Bain Oduwo</span>
           </div>
-          <p className="text-xs text-center">
-            Clinical AI · Medication Safety · Healthcare Research
+          <p className="text-xs text-center font-mono" style={{ color: 'var(--text-muted)' }}>
+            Building systems that help clinicians make safer decisions
           </p>
           <p className="text-xs font-mono">
             © {new Date().getFullYear()} · bain.me
@@ -1443,10 +1548,18 @@ function Footer() {
 export default function HomePage() {
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium"
+        style={{ background: 'var(--accent-green)', color: 'var(--bg)' }}
+      >
+        Skip to main content
+      </a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <WhatImBuilding />
+        <MissionPullQuote />
         <AboutSection />
         <HighlightsSection />
         <ProjectsSection />
