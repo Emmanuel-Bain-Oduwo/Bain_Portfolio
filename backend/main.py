@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Emmanuel Bain Oduwo — Portfolio API",
-    description="Backend for bain.me — contact form, email delivery, and submission storage.",
+    description="Backend for bainiac.me — contact form, email delivery, and submission storage.",
     version="1.0.0",
     lifespan=lifespan,
     docs_url="/docs",
@@ -53,7 +53,7 @@ app.include_router(booking.router, prefix="/api")
 
 @app.get("/", tags=["health"])
 def root():
-    return {"status": "ok", "service": "bain.me portfolio API", "version": "1.0.0"}
+    return {"status": "ok", "service": "bainiac.me portfolio API", "version": "1.0.0"}
 
 
 @app.get("/health", tags=["health"])

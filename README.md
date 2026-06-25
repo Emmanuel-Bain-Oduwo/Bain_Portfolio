@@ -1,6 +1,6 @@
 # Emmanuel Bain Oduwo — Portfolio & Services
 
-Live at **[www.bain.me](https://www.bain.me)** · Services at **[www.bain.me/services](https://www.bain.me/services)**
+Live at **[www.bainiac.me](https://www.bainiac.me)** · Services at **[www.bainiac.me/services](https://www.bainiac.me/services)**
 
 I'm a pharmacy student and AI engineer building clinical AI systems, medication safety tools, and healthcare datasets. This repo powers my portfolio website and services platform — where investors, recruiters, hospitals, pharma companies, and research institutions can find my work, explore what I offer, and book a call or send a message directly.
 
@@ -104,7 +104,7 @@ Opens at `http://localhost:8000`. Interactive API docs at `/docs`.
 1. Go to [vercel.com](https://vercel.com) and import this repo
 2. Set **Root Directory** to `frontend`
 3. Vercel picks up Next.js automatically
-4. Add your custom domain (`www.bain.me`) in project settings
+4. Add your custom domain (`www.bainiac.me`) in project settings
 
 **Environment variable to set in Vercel:**
 
@@ -130,7 +130,7 @@ Opens at `http://localhost:8000`. Interactive API docs at `/docs`.
 | `SMTP_PASSWORD` | Your Google App Password (see note below) |
 | `CONTACT_EMAIL` | `emmanuelbain@kemirix.com` |
 | `FROM_EMAIL` | `emmanuelbain@kemirix.com` |
-| `FRONTEND_URL` | `https://www.bain.me` |
+| `FRONTEND_URL` | `https://www.bainiac.me` |
 
 > **Google App Password** — Go to your Google Account → Security → 2-Step Verification → App Passwords. Generate one for "Mail" and use it as `SMTP_PASSWORD`. Required because Google blocks plain-password SMTP login.
 

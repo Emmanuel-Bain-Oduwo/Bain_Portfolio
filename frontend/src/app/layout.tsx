@@ -3,7 +3,7 @@ import { ThemeProvider } from 'next-themes'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.bain.me'),
+  metadataBase: new URL('https://www.bainiac.me'),
   title: {
     default: 'Emmanuel Bain Oduwo — Clinical AI Engineer & Healthcare AI Researcher',
     template: '%s | Emmanuel Bain Oduwo',
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     'Healthcare AI Services',
     'Book Clinical AI Consultation',
   ],
-  authors: [{ name: 'Emmanuel Bain Oduwo', url: 'https://www.bain.me' }],
+  authors: [{ name: 'Emmanuel Bain Oduwo', url: 'https://www.bainiac.me' }],
   creator: 'Emmanuel Bain Oduwo',
   publisher: 'Emmanuel Bain Oduwo',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.bain.me',
+    url: 'https://www.bainiac.me',
     siteName: 'Emmanuel Bain Oduwo',
     title: 'Emmanuel Bain Oduwo — Clinical AI Engineer & Healthcare AI Researcher',
     description:
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   alternates: {
-    canonical: 'https://www.bain.me',
+    canonical: 'https://www.bainiac.me',
   },
   category: 'technology',
 }
@@ -110,7 +110,7 @@ export default function RootLayout({
               jobTitle: 'Clinical AI Engineer & Pharmacy Student',
               description:
                 'Clinical AI Engineer and Co-Founder of Kemirix Health Technologies. Building clinical AI systems, drug interaction tools, pharmacovigilance datasets, and medication safety infrastructure for hospitals, pharma companies, and health tech startups.',
-              url: 'https://www.bain.me',
+              url: 'https://www.bainiac.me',
               email: 'emmanuelbain@kemirix.com',
               sameAs: [
                 'https://www.linkedin.com/in/emmanuel-bain-240284382',
@@ -144,7 +144,7 @@ export default function RootLayout({
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
                 name: 'Clinical AI & Healthcare Technology Services',
-                url: 'https://www.bain.me/services',
+                url: 'https://www.bainiac.me/services',
                 itemListElement: [
                   { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Clinical AI Development' } },
                   { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Healthcare Data Engineering' } },

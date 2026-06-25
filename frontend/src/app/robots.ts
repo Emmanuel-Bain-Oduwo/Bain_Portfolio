@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://www.bain.me/sitemap.xml',
-    host: 'https://www.bain.me',
+    sitemap: 'https://www.bainiac.me/sitemap.xml',
+    host: 'https://www.bainiac.me',
   }
 }

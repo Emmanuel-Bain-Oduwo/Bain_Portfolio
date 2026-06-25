@@ -29,7 +29,7 @@ def _build_admin_html(name: str, email: str, organization: str | None, subject: 
         <!-- Header -->
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-radius:12px 12px 0 0;padding:28px 36px;">
-            <p style="margin:0;font-family:monospace;font-size:11px;color:#00FF87;letter-spacing:2px;text-transform:uppercase;">bain.me · New Message</p>
+            <p style="margin:0;font-family:monospace;font-size:11px;color:#00FF87;letter-spacing:2px;text-transform:uppercase;">bainiac.me · New Message</p>
             <h1 style="margin:10px 0 0;font-size:20px;color:#F0F0F0;font-weight:600;">{subject}</h1>
           </td>
         </tr>
@@ -69,7 +69,7 @@ def _build_admin_html(name: str, email: str, organization: str | None, subject: 
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
             <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">
-              Submitted via <a href="https://www.bain.me" style="color:#00FF87;text-decoration:none;">bain.me</a>
+              Submitted via <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bain.me</a>
               &nbsp;·&nbsp; Reply-To is set to the sender's email
             </p>
           </td>
@@ -119,7 +119,7 @@ def _build_autoreply_html(name: str, subject: str) -> str:
               <p style="margin:0 0 4px;color:#F0F0F0;font-size:14px;font-weight:600;">Emmanuel Bain Oduwo</p>
               <p style="margin:0 0 2px;color:#6B7B72;font-size:13px;">B.Pharm Student · AI Engineer</p>
               <p style="margin:0 0 12px;color:#6B7B72;font-size:13px;">Co-Founder, Kemirix Health Technologies</p>
-              <a href="https://www.bain.me" style="color:#00FF87;font-size:13px;text-decoration:none;font-family:monospace;">www.bain.me</a>
+              <a href="https://www.bainiac.me" style="color:#00FF87;font-size:13px;text-decoration:none;font-family:monospace;">www.bainiac.me</a>
             </div>
           </td>
         </tr>
@@ -129,7 +129,7 @@ def _build_autoreply_html(name: str, subject: str) -> str:
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
             <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">
               You're receiving this because you submitted a message at
-              <a href="https://www.bain.me" style="color:#00FF87;text-decoration:none;">bain.me</a>
+              <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bain.me</a>
             </p>
           </td>
         </tr>
@@ -161,7 +161,7 @@ def send_contact_emails(
 
             # 1 — Admin notification
             admin_msg = MIMEMultipart("alternative")
-            admin_msg["Subject"] = f"[bain.me] New message from {name}: {subject}"
+            admin_msg["Subject"] = f"[bainiac.me] New message from {name}: {subject}"
             admin_msg["From"] = f"{settings.from_name} <{settings.from_email}>"
             admin_msg["To"] = settings.contact_email
             admin_msg["Reply-To"] = f"{name} <{email}>"
@@ -216,7 +216,7 @@ def _build_booking_admin_html(
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-radius:12px 12px 0 0;padding:28px 36px;">
-            <p style="margin:0;font-family:monospace;font-size:11px;color:#00FF87;letter-spacing:2px;text-transform:uppercase;">bain.me · New Booking Request</p>
+            <p style="margin:0;font-family:monospace;font-size:11px;color:#00FF87;letter-spacing:2px;text-transform:uppercase;">bainiac.me · New Booking Request</p>
             <h1 style="margin:10px 0 0;font-size:20px;color:#F0F0F0;font-weight:600;">{service}</h1>
           </td>
         </tr>
@@ -244,7 +244,7 @@ def _build_booking_admin_html(
         </tr>
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
-            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">Submitted via <a href="https://www.bain.me/services" style="color:#00FF87;text-decoration:none;">bain.me/services</a></p>
+            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">Submitted via <a href="https://www.bainiac.me/services" style="color:#00FF87;text-decoration:none;">bain.me/services</a></p>
           </td>
         </tr>
       </table>
@@ -281,13 +281,13 @@ def _build_booking_autoreply_html(name: str, service: str) -> str:
               <p style="margin:0 0 4px;color:#F0F0F0;font-size:14px;font-weight:600;">Emmanuel Bain Oduwo</p>
               <p style="margin:0 0 2px;color:#6B7B72;font-size:13px;">B.Pharm Student · AI Engineer</p>
               <p style="margin:0 0 12px;color:#6B7B72;font-size:13px;">Co-Founder, Kemirix Health Technologies</p>
-              <a href="https://www.bain.me/services" style="color:#00FF87;font-size:13px;text-decoration:none;font-family:monospace;">bain.me/services</a>
+              <a href="https://www.bainiac.me/services" style="color:#00FF87;font-size:13px;text-decoration:none;font-family:monospace;">bain.me/services</a>
             </div>
           </td>
         </tr>
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
-            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">You're receiving this because you submitted a booking request at <a href="https://www.bain.me" style="color:#00FF87;text-decoration:none;">bain.me</a></p>
+            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">You're receiving this because you submitted a booking request at <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bain.me</a></p>
           </td>
         </tr>
       </table>
@@ -317,7 +317,7 @@ def send_booking_emails(
             server.login(settings.smtp_user, settings.smtp_password)
 
             admin_msg = MIMEMultipart("alternative")
-            admin_msg["Subject"] = f"[bain.me] Booking request from {name}: {service}"
+            admin_msg["Subject"] = f"[bainiac.me] Booking request from {name}: {service}"
             admin_msg["From"] = f"{settings.from_name} <{settings.from_email}>"
             admin_msg["To"] = settings.contact_email
             admin_msg["Reply-To"] = f"{name} <{email}>"

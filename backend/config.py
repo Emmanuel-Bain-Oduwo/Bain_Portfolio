@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     from_email: str = "emmanuelbain@kemirix.com"
     from_name: str = "Emmanuel Bain Oduwo Portfolio"
 
-    frontend_url: str = "https://www.bain.me"
+    frontend_url: str = "https://www.bainiac.me"
 
     class Config:
         env_file = ".env"

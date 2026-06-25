@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     'Emmanuel Bain Oduwo Services',
   ],
   alternates: {
-    canonical: 'https://www.bain.me/services',
+    canonical: 'https://www.bainiac.me/services',
   },
   openGraph: {
     title: 'Clinical AI & Healthcare Technology Services — Emmanuel Bain Oduwo',
     description:
       'Clinical AI development, medication safety consulting, healthcare data engineering, and more. Book a discovery call.',
-    url: 'https://www.bain.me/services',
+    url: 'https://www.bainiac.me/services',
     type: 'website',
   },
 }
