@@ -157,7 +157,7 @@ export const EXPERIENCE = [
   {
     role: 'Co-Founder',
     company: 'Kemirix Health Technologies',
-    period: '2025 – Present',
+    period: '2026 – Present',
     type: 'Startup',
     contributions: [
       'Designed clinical AI architecture for medication safety platform',
@@ -171,7 +171,7 @@ export const EXPERIENCE = [
   {
     role: 'Founder',
     company: 'Acadebit',
-    period: '2025 – Present',
+    period: '2026 – Present',
     type: 'Startup',
     contributions: [
       'Building AI-powered educational technology systems',
@@ -182,7 +182,7 @@ export const EXPERIENCE = [
   {
     role: 'Founder & Instructor',
     company: 'TechFryz',
-    period: '2023 – 2025',
+    period: '2025',
     type: 'Education',
     contributions: [
       'Delivered AI, ML, Data Science, and Python education programs',
