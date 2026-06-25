@@ -54,6 +54,50 @@ class ContactResponse(BaseModel):
     message: str
 
 
+class BookingCreate(BaseModel):
+    name: str
+    email: EmailStr
+    organization: Optional[str] = None
+    service: str
+    preferred_date: Optional[str] = None
+    preferred_time: Optional[str] = None
+    timezone: Optional[str] = None
+    notes: Optional[str] = None
+
+    @field_validator("name")
+    @classmethod
+    def name_not_empty(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("Name cannot be empty")
+        if len(v) > 255:
+            raise ValueError("Name too long")
+        return v
+
+    @field_validator("service")
+    @classmethod
+    def service_not_empty(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("Please select a service")
+        return v
+
+    @field_validator("notes")
+    @classmethod
+    def clean_notes(cls, v: Optional[str]) -> Optional[str]:
+        if v:
+            v = v.strip()
+            if len(v) > 5000:
+                raise ValueError("Notes too long (max 5000 characters)")
+            return v if v else None
+        return None
+
+
+class BookingResponse(BaseModel):
+    success: bool
+    message: str
+
+
 class ContactRead(BaseModel):
     id: int
     name: str

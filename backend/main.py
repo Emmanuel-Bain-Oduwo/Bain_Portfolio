@@ -7,7 +7,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
 from config import get_settings
 from database import create_tables
-from routers import contact
+from routers import contact, booking
 
 logging.basicConfig(
     level=logging.INFO,
@@ -48,6 +48,7 @@ app.add_middleware(
 )
 
 app.include_router(contact.router, prefix="/api")
+app.include_router(booking.router, prefix="/api")
 
 
 @app.get("/", tags=["health"])
