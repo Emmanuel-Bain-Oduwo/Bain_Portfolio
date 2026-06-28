@@ -69,7 +69,7 @@ def _build_admin_html(name: str, email: str, organization: str | None, subject: 
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
             <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">
-              Submitted via <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bain.me</a>
+              Submitted via <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bainiac.me</a>
               &nbsp;·&nbsp; Reply-To is set to the sender's email
             </p>
           </td>
@@ -112,7 +112,8 @@ def _build_autoreply_html(name: str, subject: str) -> str:
             </p>
             <p style="margin:0 0 32px;color:#6B7B72;font-size:14px;line-height:1.7;">
               If your message is urgent, you can reach me directly at
-              <a href="mailto:emmanuelbain@kemirix.com" style="color:#00FF87;text-decoration:none;">emmanuelbain@kemirix.com</a>.
+              <a href="mailto:emmanuelbain@kemirix.com" style="color:#00FF87;text-decoration:none;">emmanuelbain@kemirix.com</a>
+              or WhatsApp me at <a href="https://wa.me/254707862452" style="color:#00FF87;text-decoration:none;">+254 707 862 452</a>.
             </p>
 
             <div style="border-top:1px solid #1E2E22;padding-top:28px;">
@@ -129,7 +130,7 @@ def _build_autoreply_html(name: str, subject: str) -> str:
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
             <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">
               You're receiving this because you submitted a message at
-              <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bain.me</a>
+              <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bainiac.me</a>
             </p>
           </td>
         </tr>
@@ -244,7 +245,7 @@ def _build_booking_admin_html(
         </tr>
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
-            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">Submitted via <a href="https://www.bainiac.me/services" style="color:#00FF87;text-decoration:none;">bain.me/services</a></p>
+            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">Submitted via <a href="https://www.bainiac.me/services" style="color:#00FF87;text-decoration:none;">bainiac.me/services</a></p>
           </td>
         </tr>
       </table>
@@ -274,20 +275,21 @@ def _build_booking_autoreply_html(name: str, service: str) -> str:
               I've received your booking request and will confirm a time with you within 24–48 hours.
             </p>
             <p style="margin:0 0 32px;color:#6B7B72;font-size:14px;line-height:1.7;">
-              If this is urgent, email me directly at
-              <a href="mailto:emmanuelbain@kemirix.com" style="color:#00FF87;text-decoration:none;">emmanuelbain@kemirix.com</a>.
+              If this is urgent, email me at
+              <a href="mailto:emmanuelbain@kemirix.com" style="color:#00FF87;text-decoration:none;">emmanuelbain@kemirix.com</a>
+              or WhatsApp <a href="https://wa.me/254707862452" style="color:#00FF87;text-decoration:none;">+254 707 862 452</a>.
             </p>
             <div style="border-top:1px solid #1E2E22;padding-top:28px;">
               <p style="margin:0 0 4px;color:#F0F0F0;font-size:14px;font-weight:600;">Emmanuel Bain Oduwo</p>
               <p style="margin:0 0 2px;color:#6B7B72;font-size:13px;">B.Pharm Student · AI Engineer</p>
               <p style="margin:0 0 12px;color:#6B7B72;font-size:13px;">Co-Founder, Kemirix Health Technologies</p>
-              <a href="https://www.bainiac.me/services" style="color:#00FF87;font-size:13px;text-decoration:none;font-family:monospace;">bain.me/services</a>
+              <a href="https://www.bainiac.me/services" style="color:#00FF87;font-size:13px;text-decoration:none;font-family:monospace;">bainiac.me/services</a>
             </div>
           </td>
         </tr>
         <tr>
           <td style="background:#111A14;border:1px solid #1E2E22;border-top:none;border-radius:0 0 12px 12px;padding:20px 36px;">
-            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">You're receiving this because you submitted a booking request at <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bain.me</a></p>
+            <p style="margin:0;font-size:12px;color:#6B7B72;font-family:monospace;">You're receiving this because you submitted a booking request at <a href="https://www.bainiac.me" style="color:#00FF87;text-decoration:none;">bainiac.me</a></p>
           </td>
         </tr>
       </table>
